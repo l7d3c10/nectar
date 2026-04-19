@@ -13,7 +13,7 @@ export default function Onboard({ navigation }) {
         <Text style={{fontSize: 45}}>🥕</Text>
         <Text style={styles.title}>Welcome{'\n'}to our store</Text>
         <Text style={styles.sub}>Get your groceries in as fast as one hour</Text>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Signin')}>
+        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.btnText}>Get Started</Text>
         </TouchableOpacity>
       </View>

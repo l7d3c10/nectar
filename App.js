@@ -4,23 +4,26 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import SplashScreen from './src/screens/splash';
-import OnboardScreen from './src/screens/onboard';
-import SigninScreen from './src/screens/signin';
-import SignupScreen from './src/screens/signup';
-import LoginScreen from './src/screens/login';
-import NumberScreen from './src/screens/number';
-import VerificationScreen from './src/screens/verification';
-import LocationScreen from './src/screens/location';
-import HomeScreen from './src/screens/home';
-import ExploreScreen from './src/screens/explore';
-import ProductDetailScreen from './src/screens/productdetail';
-import BeveragesScreen from './src/screens/beverages';
+import Splash from './src/screens/splash';
+import Onboard from './src/screens/onboard';
+import SignIn from './src/screens/signin';
+import Number from './src/screens/number';
+import Verification from './src/screens/verification';
+import SelectLocation from './src/screens/location';
+import Login from './src/screens/login';
+import SignUp from './src/screens/signup';
+import Home from './src/screens/home';
+import ProductDetail from './src/screens/productdetail';
+import Beverages from './src/screens/beverages';
 
+import Explore from './src/screens/explore';
+import Search from './src/screens/search';
+import Filters from './src/screens/filter'; 
+import Cart from './src/screens/mycart';
+import Favorites from './src/screens/favorites';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-
 
 function MainTabs() {
   return (
@@ -41,28 +44,37 @@ function MainTabs() {
         },
       })}
     >
-      <Tab.Screen name="Shop" component={HomeScreen} />
-      <Tab.Screen name="Explore" component={() => <View />} />
-      <Tab.Screen name="Cart" component={() => <View />} />
-      <Tab.Screen name="Favourite" component={() => <View />} />
+      <Tab.Screen name="Shop" component={Home} />
+      
+      <Tab.Screen name="Explore" component={Explore} /> 
+      
+      <Tab.Screen name="Cart" component={Cart} /> 
+      <Tab.Screen name="Favourite" component={Favorites} />
+      
       <Tab.Screen name="Account" component={() => <View />} />
     </Tab.Navigator>
   );
 }
 
-
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Splash" component={SplashScreen} />
-        <Stack.Screen name="Onboard" component={OnboardScreen} />
-        <Stack.Screen name="Signin" component={SigninScreen} />
-        <Stack.Screen name="Signup" component={SignupScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Number" component={NumberScreen} />
-        <Stack.Screen name="Verification" component={VerificationScreen} />
-        <Stack.Screen name="Location" component={LocationScreen} />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Screen name="Onboard" component={Onboard} />
+        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="Number" component={Number} />
+        <Stack.Screen name="Verification" component={Verification} />
+        <Stack.Screen name="SelectLocation" component={SelectLocation} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+        
+        <Stack.Screen name="MainApp" component={MainTabs} />
+        
+        <Stack.Screen name="Search" component={Search} />
+        <Stack.Screen name="Filters" component={Filters} />
+        <Stack.Screen name="ProductDetail" component={ProductDetail} />
+        <Stack.Screen name="Beverages" component={Beverages} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -12,7 +12,7 @@ export default function VerificationScreen({ navigation }) {
       <TextInput style={styles.input} keyboardType="number-pad" placeholder="- - - -" maxLength={4} autoFocus={true} />
       <View style={styles.bottomRow}>
         <Text style={styles.resend}>Resend Code</Text>
-        <TouchableOpacity style={styles.fab} onPress={() => navigation.navigate('Locations')}>
+        <TouchableOpacity style={styles.fab} onPress={() => navigation.navigate('SelectLocation')}>
           <Text style={styles.fabText}>{'>'}</Text>
         </TouchableOpacity>
       </View>

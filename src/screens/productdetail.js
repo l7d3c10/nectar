@@ -9,7 +9,7 @@ export default function ProductDetail({ route, navigation }) {
     quantity: '1kg, Priceg',
     size: '1kg, Price',
     price: '4.99',
-    image: require('../assets/Red Apple.png')
+    image: require('../../assets/Red Apple.png')
   };
 
   const [qty, setQty] = useState(1);

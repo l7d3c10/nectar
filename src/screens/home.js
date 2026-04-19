@@ -2,13 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, TextInput, Image, FlatList, TouchableOpacity } from 'react-native';
 
 const exclusiveOffers = [
-  { id: '1', name: 'Organic Bananas', price: '4.99', quantity: '7pcs, Priceg', image: require('../assets/banana.jpg') },
-  { id: '2', name: 'Red Apple', price: '4.99', quantity: '1kg, Priceg', image: require('../assets/Red Apple.png') },
+  { id: '1', name: 'Organic Bananas', price: '4.99', quantity: '7pcs, Priceg', image: require('../../assets/banana.jpg') },
+  { id: '2', name: 'Red Apple', price: '4.99', quantity: '1kg, Priceg', image: require('../../assets/Red Apple.png') },
 ];
 
 const bestSellers = [
-  { id: '3', name: 'Bell Pepper Red', price: '4.99', quantity: '1kg, Priceg', image: require('../assets/bellpepper.png') },
-  { id: '4', name: 'Ginger', price: '4.99', quantity: '250gm, Priceg', image: require('../assets/ginger.png') },
+  { id: '3', name: 'Bell Pepper Red', price: '4.99', quantity: '1kg, Priceg', image: require('../../assets/bellpepper.png') },
+  { id: '4', name: 'Ginger', price: '4.99', quantity: '250gm, Priceg', image: require('../../assets/ginger.png') },
 ];
 
 const SectionTitle = ({ title }) => (
@@ -41,7 +41,7 @@ export default function Home({ route, navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Image source={require('../assets/logo.png')} style={{width: 30, height: 30, tintColor: '#F8A44C'}} resizeMode="contain" />
+        <Image source={require('../../assets/logo.png')} style={{width: 30, height: 30, tintColor: '#F8A44C'}} resizeMode="contain" />
         <View style={styles.locationWrapper}>
           <Text style={{ fontSize: 16 }}>📍</Text>
           <Text style={styles.locationText}>{displayLocation}</Text> 
@@ -55,7 +55,7 @@ export default function Home({ route, navigation }) {
         </View>
 
         <View style={styles.bannerContainer}>
-          <Image source={require('../assets/banner.jpg')} style={styles.bannerImage} resizeMode="cover" />
+          <Image source={require('../../assets/banner.jpg')} style={styles.bannerImage} resizeMode="cover" />
         </View>
 
         <SectionTitle title="Exclusive Offer" />

@@ -18,12 +18,16 @@ export default function Login({ navigation }) {
         <Text style={styles.forgot}>Forgot Password?</Text>
       </TouchableOpacity>
       
-      <TouchableOpacity style={styles.btn}>
+      {/* CẬP NHẬT: Thêm onPress để chuyển sang MainApp */}
+      <TouchableOpacity 
+        style={styles.btn} 
+        onPress={() => navigation.navigate('MainApp')}
+      >
         <Text style={styles.btnText}>Log In</Text>
       </TouchableOpacity>
       
       <Text style={styles.signupText}>
-        Don't have an account? <Text style={styles.signupLink} onPress={() => navigation.navigate('Signup')}>Signup</Text>
+        Don't have an account? <Text style={styles.signupLink} onPress={() => navigation.navigate('SignUp')}>Signup</Text>
       </Text>
     </SafeAreaView>
   );

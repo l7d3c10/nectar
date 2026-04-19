@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity, Dimensions } from 'react-native';
 
 const beveragesData = [
-  { id: '1', name: 'Diet Coke', size: '355ml, Price', price: '1.99', image: require('../assets/DietCoke.png') },
-  { id: '2', name: 'Sprite Can', size: '325ml, Price', price: '1.50', image: require('../assets/SpriteCan.png') },
-  { id: '3', name: 'Apple & Grape\nJuice', size: '2L, Price', price: '15.99', image: require('../assets/Applegrape.png') },
-  { id: '4', name: 'Orenge Juice', size: '2L, Price', price: '15.99', image: require('../assets/OrengeJuice.png') }, // Giữ nguyên tên file có chữ 'e' của bạn
-  { id: '5', name: 'Coca Cola Can', size: '325ml, Price', price: '4.99', image: require('../assets/CocaColaCan.png') },
-  { id: '6', name: 'Pepsi Can', size: '330ml, Price', price: '4.99', image: require('../assets/PepsiCan.png') },
+  { id: '1', name: 'Diet Coke', size: '355ml, Price', price: '1.99', image: require('../../assets/DietCoke.png') },
+  { id: '2', name: 'Sprite Can', size: '325ml, Price', price: '1.50', image: require('../../assets/SpriteCan.png') },
+  { id: '3', name: 'Apple & Grape\nJuice', size: '2L, Price', price: '15.99', image: require('../../assets/Applegrape.png') },
+  { id: '4', name: 'Orenge Juice', size: '2L, Price', price: '15.99', image: require('../../assets/OrengeJuice.png') }, // Giữ nguyên tên file có chữ 'e' của bạn
+  { id: '5', name: 'Coca Cola Can', size: '325ml, Price', price: '4.99', image: require('../../assets/CocaColaCan.png') },
+  { id: '6', name: 'Pepsi Can', size: '330ml, Price', price: '4.99', image: require('../../assets/PepsiCan.png') },
 ];
 
 export default function Beverages({ navigation }) {
